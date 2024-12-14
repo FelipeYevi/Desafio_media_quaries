@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*VERSIÓN MOBILE*/
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "filtros"
+    "productos"
+    "footer";
+}
+/*INICIO BARRA NAVEGACIÓN*/
+.navbar {
+  display: flex;
+  grid-area: navbar;
+  background-color: #ff6500;
+  padding: 30px;
+  color: white;
+  justify-content: space-between;
+}
+.navbar img {
+  width: 2em;
+}
+.logo {
+  gap: 10px;
+  display: flex;
+}
+.texto-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*INICIO FILTROS*/
+
+.filtros {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  grid-area: filtros;
+  background-color: #1e3e62;
+  gap: 10px;
+  color: white;
+}
+.select {
+  display: flex;
+  width: 30em;
+  height: 2em;
+  border-radius: 5px;
+}
+
+/*INICIO PRODUCTOS*/
+.productos {
+  display: flex;
+  grid-area: productos;
+  justify-content: center;
+}
+
+.item1 {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 4px 4px 10px rgba(5, 5, 5, 0.2);
+  margin-top: 100px;
+}
+.item1 img {
+  width: 20em;
+}
+.item1 button {
+  display: flex;
+  background-color: #0b192c;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+.paginado {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+.paginado a {
+  padding: 8px;
+  border: 1px solid blue;
+  border-radius: 2px;
+}
+
+/*INICIO FOOTER*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  grid-area: footer;
+  background-color: #76abae;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*INICIO BREAKPOINT DESKTOP*/
+@media (min-width: 576px) {
+  .container {
+    grid-template-areas:
+      "navbar navbar"
+      "filtros productos"
+      "footer footer";
+  }
+}
