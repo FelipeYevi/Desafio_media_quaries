@@ -18,10 +18,12 @@
 .navbar {
   display: flex;
   grid-area: navbar;
-  background-color: #ff6500;
-  padding: 30px;
+  background-color: #d6c8be;
+  padding: 20px;
   color: white;
   justify-content: space-between;
+
+  
 }
 .navbar img {
   width: 2em;
@@ -34,6 +36,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.navbar ul{
+  display: none;
+}
+.navbar i{
+  display: flex;
 }
 
 /*INICIO FILTROS*/
@@ -58,12 +66,15 @@
 
 /*INICIO PRODUCTOS*/
 .productos {
+background-color: #ff6500;
   display: flex;
   grid-area: productos;
   justify-content: center;
+
+
 }
 
-.item1 {
+.item {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -73,18 +84,24 @@
   align-items: center;
   gap: 10px;
   box-shadow: 4px 4px 10px rgba(5, 5, 5, 0.2);
-  margin-top: 100px;
+margin-top: 50px;
+
 }
-.item1 img {
+
+.items img {
   width: 20em;
 }
-.item1 button {
-  display: flex;
+.items button  {
   background-color: #0b192c;
   padding: 10px;
   border-radius: 5px;
   color: white;
 }
+.items-ocultos-mobile{
+  display: none;
+}
+
+/*paginado*/
 .paginado {
   display: flex;
   justify-content: center;
@@ -103,17 +120,70 @@
   flex-direction: column;
   grid-area: footer;
   background-color: #76abae;
-  padding: 20px;
+  padding: 10px;
   justify-content: center;
   align-items: center;
 }
+
 
 /*INICIO BREAKPOINT DESKTOP*/
 @media (min-width: 576px) {
   .container {
     grid-template-areas:
-      "navbar navbar"
-      "filtros productos"
+      "navbar filtros"
+      "navbar productos"
       "footer footer";
+      grid-template-columns: auto 3fr;
   }
+
+.navbar{
+  background-color: #2f1f4f;
+  display: grid;
+  grid-row: 1fr
+  ;
+}
+.navbar ul{
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: center;
+}
+
+  
+
+
+.navbar i{
+  display: none;
+}
+.item{
+  display: flex;
+}
+
+.items-ocultos-mobile{
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+ flex-direction: row;
+}
+
+
+
+.productos{
+  border:5px solid red;
+  background-color: aliceblue;
+  display: flex;
+
+
+}
+.items{
+  border: 5px solid red;
+  width: 100%;
+}
+.select {
+  display: flex;
+  width: 100%;
+  height: 2em;
+  border-radius: 5px;
+}
 }
