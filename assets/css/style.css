@@ -49,7 +49,7 @@
 .filtros {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 30px;
   justify-content: center;
   align-items: center;
   grid-area: filtros;
@@ -70,11 +70,16 @@ background-color: #ff6500;
   display: flex;
   grid-area: productos;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  
+
 
 
 }
 
-.item {
+.item1 {
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -84,7 +89,7 @@ background-color: #ff6500;
   align-items: center;
   gap: 10px;
   box-shadow: 4px 4px 10px rgba(5, 5, 5, 0.2);
-margin-top: 50px;
+
 
 }
 
@@ -97,9 +102,36 @@ margin-top: 50px;
   border-radius: 5px;
   color: white;
 }
-.items-ocultos-mobile{
+.item2{
   display: none;
+  
 }
+.item3{
+  display: none;
+  
+}
+.item4{
+  display: none;
+  
+}
+.item5{
+  display: none;
+  
+}
+.item6{
+  display: none;
+  
+}
+.item7{
+  display: none;
+  
+}
+.item8{
+  display: none;
+  
+}
+
+
 
 /*paginado*/
 .paginado {
@@ -123,6 +155,10 @@ margin-top: 50px;
   padding: 10px;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  bottom: 0;      
+  left: 0;         
+  width: 100%
 }
 
 
@@ -132,7 +168,7 @@ margin-top: 50px;
     grid-template-areas:
       "navbar filtros"
       "navbar productos"
-      "footer footer";
+      "footer productos";
       grid-template-columns: auto 3fr;
   }
 
@@ -143,47 +179,49 @@ margin-top: 50px;
   ;
 }
 .navbar ul{
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  justify-content: center;
+  align-items: center;
 }
 
-  
-
-
-.navbar i{
+  .navbar i{
   display: none;
 }
-.item{
-  display: flex;
-}
-
-.items-ocultos-mobile{
-  border: 1px solid red;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
- flex-direction: row;
-}
-
-
 
 .productos{
+  height: 100vh;
   border:5px solid red;
   background-color: aliceblue;
   display: flex;
 
 
 }
-.items{
-  border: 5px solid red;
-  width: 100%;
-}
+
+
 .select {
   display: flex;
   width: 100%;
   height: 2em;
   border-radius: 5px;
 }
+.logo{
+  display: flex;
+  border: 1px solid red;
+  height: 40px;
+  margin-left: 20px;
 }
+.logo img{
+  width: 2em;
+  height: 2em;
+}
+.footer{
+  padding: 4em;
+}
+.footer p{
+  text-align: center;
+ 
+}
+}
+
